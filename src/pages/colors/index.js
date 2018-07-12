@@ -1,7 +1,7 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import { map } from 'ramda'
-import colors from '../../data/colors'
+import React from "react"
+import { Link } from "react-router-dom"
+import { map } from "ramda"
+import colors from "../../data/colors"
 
 function li(color) {
   return (
@@ -15,7 +15,7 @@ const Colors = () => {
   return (
     <div>
       <h1>Colors</h1>
-      {/* TODO: Provide a link that sends the user to the home page/menu. */}
+      <Link to="/">Menu</Link>
       <ul>{map(li, colors)}</ul>
     </div>
   )

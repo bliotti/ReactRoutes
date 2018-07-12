@@ -1,8 +1,7 @@
-import React from 'react'
-import { map } from 'ramda'
-import starwarsnames from '../../data/starwarsnames'
-import {Link} from 'react-router-dom'
-
+import React from "react"
+import { map } from "ramda"
+import starwarsnames from "../../data/starwarsnames"
+import { Link } from "react-router-dom"
 
 function li(c) {
   return (
@@ -16,7 +15,7 @@ const StarWars = props => {
   return (
     <div>
       <h1>Star Wars Character Names</h1>
-      {/* TODO: Provide a link that sends the user to the home page/menu. */}
+      <Link to="/">Menu</Link>
       <ul>{map(li, starwarsnames)}</ul>
     </div>
   )
