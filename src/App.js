@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Switch } from "react-router-dom"
 import Home from "./pages/menu"
 import ListColors from "./pages/colors"
 import ShowAColor from "./pages/colors/show"
@@ -27,27 +27,37 @@ const App = props => {
   return (
     <BrowserRouter>
       <div>
-        <BrowserRouter exact path="/" component={Home} />
-        <BrowserRouter exact path="/listColors" component={ListColors} />
-        <BrowserRouter exact path="/listColors/:id" component={ShowAColor} />
-        <BrowserRouter exact path="/ListBuzzWords" component={ListBuzzwords} />
-        <BrowserRouter
-          exact
-          path="/ListBuzzWords/:id"
-          component={ShowABuzzword}
-        />
-        <BrowserRouter
-          exact
-          path="/ListStarWarsNames"
-          component={ListStarWarsNames}
-        />
-        <BrowserRouter
-          exact
-          path="/ListStarWarsNames/:id"
-          component={ShowAStarWarsName}
-        />
-        <BrowserRouter exact path="/listCookies" component={ListCookies} />
-        <BrowserRouter exact path="/listCookies/:id" component={ShowACookie} />
+        <Switch>
+          <BrowserRouter exact path="/" component={Home} />
+          <BrowserRouter exact path="/listColors" component={ListColors} />
+          <BrowserRouter exact path="/listColors/:id" component={ShowAColor} />
+          <BrowserRouter
+            exact
+            path="/ListBuzzWords"
+            component={ListBuzzwords}
+          />
+          <BrowserRouter
+            exact
+            path="/ListBuzzWords/:id"
+            component={ShowABuzzword}
+          />
+          <BrowserRouter
+            exact
+            path="/ListStarWarsNames"
+            component={ListStarWarsNames}
+          />
+          <BrowserRouter
+            exact
+            path="/ListStarWarsNames/:id"
+            component={ShowAStarWarsName}
+          />
+          <BrowserRouter exact path="/listCookies" component={ListCookies} />
+          <BrowserRouter
+            exact
+            path="/listCookies/:id"
+            component={ShowACookie}
+          />
+        </Switch>
       </div>
     </BrowserRouter>
   )
